@@ -1,0 +1,345 @@
+:root {
+    /* --- Structural & Global Elements --- */
+    --body-bg: #f2ecdc;
+    /* Jessa Logo Palette: Cream[cite: 21] */
+    --body-text: #222222;
+
+    --header-bg: linear-gradient(to right, #ffffff 50%, #e8dcac 100%);
+    /* Gradient from White to Light Gold[cite: 21] */
+
+    --nav-link-color: #915f27;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --nav-link-hover: #b49151;
+    /* Jessa Logo Palette: Medium Gold[cite: 21] */
+
+    --footer-bg: #2c305f;
+    /* Jessa Badge Palette: Deep Navy[cite: 22] */
+    --footer-text: #eaeaea;
+    /* Jessa Badge Palette: Light Gray[cite: 22] */
+
+    /* --- Header & Logo --- */
+    --id-logo-border: #b49151;
+    /* Jessa Logo Palette: Medium Gold[cite: 21] */
+
+    /* --- Hero Section --- */
+    --class-hero-bg: #e8dcac;
+    /* Jessa Logo Palette: Light Gold[cite: 21] */
+    --id-hero-text-h1: whitesmoke;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --id-hero-text-p: #ffffff;
+
+    /* --- About Section --- */
+    --class-about-bg: #e7e2d5CC;
+    /* Jessa Logo Palette: Cream[cite: 21] */
+    --id-about-business-h2: #915f27;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --id-about-business-text: #444444;
+
+    --id-about-jessa-h2: #915f27;
+    /* Jessa Logo Palette: Dark Brown[cite: 21] */
+    --id-about-jessa-text: #444444;
+
+    /* --- Certification Badge Container --- */
+    --class-cert-badge-container-bg: #eaeaea;
+    /* Jessa Badge Palette: Light Gray[cite: 22] */
+    --class-cert-badge-container-border: #b49151;
+    /* Jessa Badge Palette: Silver[cite: 22] */
+    --class-cert-badge-container-h3: #2c305f;
+    /* Jessa Badge Palette: Deep Navy[cite: 22] */
+
+    /* --- Footer Sections --- */
+    --footer-bg: #1a241b;
+        /* Deep Forest Green */
+        --footer-text: #f2ecdc;
+        /* Warm Cream */
+        --id-address-text: #e8dcac;
+        /* Light Gold Accent */
+        --id-contact-link: #b49151;
+        /* Medium Gold */
+        --id-contact-link-hover: #ffffff;
+        /* Crisp White Hover */
+        --id-legal-text: #9eb0a0;
+        /* Muted Sage */
+}
+
+/*==============================
+RESET AND DEFAULTS
+================================*/
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    width: 98vw;
+    margin: 0 auto;
+}
+
+section {
+    padding: 15px 2px 5px 10px;;
+}
+/*==============================
+HEADER AND NAVIGATION
+================================*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 75 px;
+    align-items: center;
+    background-image: var(--header-bg);
+    height: 100px;
+    width: 98.75vw;
+    z-index: 1001;
+    opacity: 90%;
+
+}
+
+#logo {
+    height: 100px;
+    margin: 0 auto 0 5px;
+}
+
+#navigation nav ul {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#navigation nav ul li a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    transition: 0.2s ease-in-out;
+}
+
+#navigation nav ul li a:hover {
+    color: var(--nav-link-hover);
+}
+
+#navigation nav ul li {
+    transition: 0.3s ease-in-out;
+}
+
+#navigation nav ul li:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+#navigation nav ul li:visited {
+    color: var(--body-text);
+}
+
+/*==============================
+HERO SECTION
+================================*/
+
+.hero {
+    margin: 102px auto 25px;;
+    border: 2px solid var(--id-logo-border);
+    background-image: url("../Jessa Website Project stuff/JAhrens_Hero_Image.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    min-width: 98vw;
+}
+
+#hero-image {
+    display: none;
+}
+
+#hero-text h1{
+    color: var(--id-hero-text-h1);
+        text-shadow:
+                -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                1px 1px 0 #000;
+    font-size: 3rem;
+}
+
+#hero-text p {
+    color: var(--id-hero-text-p);
+    font-size: 1.5rem;
+}
+
+/*==============================
+Article
+================================*/
+
+article {
+    padding: 2px;
+    margin-bottom: 20px;
+}
+
+.about {
+    margin-top: 20px;
+    background-color: var(--class-about-bg);
+    color: var(--id-about-business-text);
+}
+
+.about h2 {
+    color: var(--id-about-business-h2);
+}
+
+/*==============================
+Cert Badge
+================================*/
+
+#cert-badge-link {
+    text-decoration: none;
+    color: var(--class-cert-bage-container-h3);
+}
+
+.cert-badge-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 500px;
+    background: var(--class-cert-badge-container-bg);
+    border: 2px solid var(--class-cert-badge-container-border);
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#cert-badge-img {
+            max-height: 450px;
+            min-height: 250px;
+            max-width: 100%;
+            min-width: 250px;
+            width: 25vw;
+}
+
+#cert-badge-title h3{
+    font-size: 1.4rem;
+}
+
+/*==============================
+Footer
+================================*/
+
+footer{
+    background-color: var(--footer-bg);
+}
+
+footer a{
+    color: var(--id-contact-link);
+}
+
+footer a:hover{
+    color: var(--id-contact-link-hover);
+}
+
+
+
+/*==============================
+Mobile Device Rules
+================================*/
+/*====Mobile Font Reset====*/
+html {
+    font-size: 15px;
+}
+
+/*====Mobile Header====*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 75 px;
+    align-items: center;
+    background-image: var(--header-bg);
+    height: 100px;
+    width: 99.75%;
+    z-index: 1001;
+    opacity: 90%;
+
+}
+
+/*====Mobile Hero====*/
+@media screen and (max-width: 567px) {
+    .hero {
+        margin: 102px auto 25px;
+        border: 2px solid var(--id-logo-border);
+        background-image: url("../Jessa Website Project stuff/JAhrens_Hero_Image.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 550px;
+        min-width: 98vw;
+    }
+
+    #hero-image {
+        display: none;
+    }
+
+    #hero-text h1 {
+        color: var(--id-hero-text-h1);
+        text-shadow:
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
+        font-size: 1.5rem;
+    }
+
+    #hero-text p {
+        margin-top: 10px;
+        color: var(--id-hero-text-p);
+        font-size: 1rem;
+    }
+
+    /*====Mobile Cert Badge====*/
+    .cert-badge-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 250px;
+        background: var(--class-cert-badge-container-bg);
+        border: 2px solid var(--class-cert-badge-container-border);
+        margin-left: -10px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    
+    #cert-badge-img {
+        min-width: 125px;
+        min-height: 125px;
+        height: 1px;
+        width: 1px;
+    }
+
+    .cert-badge-container h3 {
+        font-size: 1.025rem;
+    }
+}

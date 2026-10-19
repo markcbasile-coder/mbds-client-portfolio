@@ -1,0 +1,22 @@
+Jessa Logo color pallet
+
+/* CSS HEX */
+--#915f27: #915f27;
+--#f2ecdc: #f2ecdc;
+--#d3bc74: #d3bc74;
+--#c0a276: #c0a276;
+--#b49151: #b49151;
+--#e8dcac: #e8dcac;
+--#eee394: #eee394;
+
+
+Jessa Badge color palette
+/* CSS HEX */
+--#2c305f: #2c305f;
+--#eaeaea: #eaeaea;
+--#939092: #939092;
+--#606284: #606284;
+--#bdbcbe: #bdbcbe;
+--#a8a6a8: #a8a6a8;
+--#8f90a7: #8f90a7;
+--#d5d4d5: #d5d4d5;
