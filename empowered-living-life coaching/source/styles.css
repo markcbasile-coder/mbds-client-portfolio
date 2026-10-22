@@ -98,7 +98,6 @@ header {
     left: 0;
     display: flex;
     flex-direction: row;
-    gap: 75 px;
     align-items: center;
     background-image: var(--header-bg);
     height: 100px;
@@ -109,12 +108,12 @@ header {
 }
 
 #logo {
-    height: 100px;
+    height: 100%;
     margin: 0 auto 0 5px;
 }
 
-#navigation nav ul {
-    margin: 0 auto;
+.navigation nav ul {
+    margin-right: 10px;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -123,26 +122,26 @@ header {
     gap: 20px;
 }
 
-#navigation nav ul li a {
+.navigation nav ul li a {
     text-decoration: none;
     color: var(--nav-link-color);
     transition: 0.2s ease-in-out;
 }
 
-#navigation nav ul li a:hover {
+.navigation nav ul li a:hover {
     color: var(--nav-link-hover);
 }
 
-#navigation nav ul li {
+.navigation nav ul li {
     transition: 0.3s ease-in-out;
 }
 
-#navigation nav ul li:hover {
+.navigation nav ul li:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
 }
 
-#navigation nav ul li:visited {
+.navigation nav ul li:visited {
     color: var(--body-text);
 }
 
@@ -243,14 +242,51 @@ Footer
 
 footer{
     background-color: var(--footer-bg);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: var(--footer-text);
+    display: grid;
+    grid-template-columns: 250px  250px  250px;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#contact-label, #legal-label, #address-label{
+    color: var(--footer-text);
+    border-bottom: 2px solid var(--footer-text);
+}
+
+footer p{
+    margin: 5px;
 }
 
 footer a{
+    display: inline-block;
     color: var(--id-contact-link);
+    text-decoration: none;
+    margin: 5px;
 }
 
 footer a:hover{
     color: var(--id-contact-link-hover);
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+footer a:visited{
+    color: whitesmoke;
+}
+
+.legal{
+    color: var(--id-legal-text);
+}
+
+.contact{
+    color: var(--id-contact-link);
+}
+
+.address{
+    color: var(--id-address-text);
 }
 
 
@@ -341,5 +377,27 @@ header {
 
     .cert-badge-container h3 {
         font-size: 1.025rem;
+    }
+
+        /*====Mobile Cert Footer====*/
+    footer {
+        background-color: var(--footer-bg);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: var(--footer-text);
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #contact-email{
+        overflow-wrap: break-word;
+    }
+
+    #contact-label,
+    #legal-label,
+    #address-label {
+        color: var(--footer-text);
+        border: 2px solid var(--footer-text);
     }
 }

@@ -7,6 +7,7 @@
         content="Ready to bridge the gap between where you are and where you want to be? Empowered Living offers expert coaching with Master Certified Life Coach Jessa Ahrens.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empowered Living</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles.css" />
 </head>
 
@@ -14,13 +15,13 @@
     <header>
         <img id="logo" src="../Jessa Website Project stuff/logo-v2.png" alt="Empowered Liviing Logo. Gold circle with leaves in it. Text reading 'A JOURNY OF SELF DISCOVERY'" />
 
-        <div id="navigation">
+        <div class="navigation">
             <nav>
                 <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Certifications</a></li>
+                    <li><a href="">Merch??</a></li>
+                    <li><a href="">Dog Pictures</a></li>
                 </ul>
             </nav>
         </div>
@@ -75,16 +76,37 @@
 
         <section id="cert-badge-title">
             <h3>See full suite of credentials.</h3>
-            <a href="./page2.html" id="cert-badge-link"><div class="cert-badge-container">
+            <a href="" id="cert-badge-link"><div class="cert-badge-container">
                 <img src="../Jessa Website Project stuff/clc-badge.png" alt="Certified Life Coach Badge" id="cert-badge-img"/>
             </div></a>
         </section>
     </main>
 
     <footer>
-        <div id="address"></div>
-        <div id="contact"><a href="contact-page">Contact</a></div>
-        <div id="legal"></div>
+        <div class="contact">
+            <p id="contact-label">CONTACT</p>
+            <a href="mailto:placeholder@example.com" id="contact-email">placeholder@example.com</a>
+            <br />
+            <a href="tel:5555555555">(555) 555-5555</a>
+            <br />
+            <a href="#" class="social-icon facebook" target="_blank" aria-label="Facebook">Facebook <i class="fa fa-facebook"></i> </a>
+            <br/>
+            <a href="#" class="social-icon instagram" target="_blank" aria-label="Instagram">Intragram <i class="fa fa-instagram"></i> </a>
+            <br />
+            <a href="#" class="social-icon linkedin" target="_blank" aria-label="LinkedIn">LinkedIn <i class="fa fa-linkedin"></i> </a>
+        </div>
+
+        <div class="address">
+            <p id="address-label">ADDRESS</p>
+            <p>street address</p>
+            <p>city</p>
+            <p>state, zip</p>
+        </div>
+
+        <div class="legal">
+            <p id="legal-label">LEGAL</p>
+            <p>&copy; 2026 Client Name. Website Designed &amp; Developed by Basile Dev Solutions. All Rights Reserved.</p>
+        </div>
     </footer>
 </body>
 
