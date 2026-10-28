@@ -1,0 +1,296 @@
+:root {
+/* ==========================================================================
+    GLOBAL PAGE & BODY STYLES VARIABLES
+    Target elements: body, main, html
+========================================================================== */
+    --background-color: rgb(244, 245, 247);
+    --nav-color: rgb(226, 230, 235);
+    --section-alt-color: rgb(255, 255, 255);
+}
+
+/* ==========================================================================
+    RESETS
+========================================================================== */
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+    GENERAL STYLING
+========================================================================== */
+body {
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+
+h1,
+h2,
+p,
+label {
+    color: black;
+}
+/* ==========================================================================
+    HEADER AND NAVIGATION
+========================================================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+}
+
+/*Navigation -  Hidden Nav*/
+/*Hide the actual checkbox input completely */
+.nav-toggle {
+    display: none;
+}
+
+/*Style the Hamburger Icon Button */
+.hamburger-btn {
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+
+/*The 3 visible lines */
+.hamburger-btn span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/*Off-Canvas Mobile Navigation Setup */
+nav.navigation {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -280px;
+    width: 280px;
+    max-width: 80vw;
+    height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--nav-color);
+    padding: 80px 24px 30px;
+    transition: left 0.4s ease-in-out;
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    box-sizing: border-box;
+    touch-action: pan-y;
+    overscroll-behavior: contain;
+    overflow-y: auto;
+}
+
+/*Link visibility & styling inside the drawer */
+nav.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+nav.navigation ul li a {
+
+font-size: 1.1rem;
+display: block;
+padding: 8px 0;
+}
+
+nav.navigation a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+/*Slide active drawer in - Open State */
+.nav-toggle:checked~nav.navigation {
+    left: 0;
+}
+
+/*nav.navigation ul li a:hover {
+    color: var(--nav-link-hover);
+}*/
+
+/*nav.navigation a:hover {
+    opacity: 0.8;
+}*/
+
+/* ==========================================================================
+    HERO SECTION
+========================================================================== */
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1150px;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.hero img {
+    width: 40%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* ==========================================================================
+    ABOUT SECTION
+========================================================================== */
+
+.about {
+    background: var(--section-alt-color);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.about img{
+    height: 200px;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+
+/* ==========================================================================
+    SECTION-2
+========================================================================== */
+
+.section-2 {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.section-2 img {
+    height: 200px;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+/* ==========================================================================
+    ADDITIONAL
+========================================================================== */
+
+.additional {
+    background: var(--section-alt-color);
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+}
+
+.additional img {
+    height: 200px;
+    border-radius: 50px;
+    margin-left: 15px;
+}
+
+/* ==========================================================================
+    FOOTER
+========================================================================== */
+
+footer {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-top: 1px solid var(--input-border);
+}
+
+/* ==========================================================================
+    MOBILE STYLING
+========================================================================== */
+@media screen and (max-width: 576px) {
+    body {
+        width: 98vw;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 2px auto;
+        width: 85%;
+        max-width: 1150px;
+    }
+
+    #hero-image {
+        width: 60%;
+        max-width: 500px;
+        margin: 2px auto;
+        z-index: -1;
+        min-width: 200px;
+    }
+
+    .about,
+    .section-2,
+    .additional {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .about img,
+    .section-2 img,
+    .additional img{
+        width: 75%;
+    }
+
+    .about img,
+    .additional img {
+        width: 75%;
+        margin: 15px auto;
+        }
+
+    .section-2 img {
+        width: 75%;
+        margin-top: -15px;
+        margin-bottom: 10px;
+    }
+}
