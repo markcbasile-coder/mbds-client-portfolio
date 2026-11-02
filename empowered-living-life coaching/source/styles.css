@@ -237,6 +237,44 @@ Cert Badge
 }
 
 /*==============================
+CERT PAGE
+================================*/
+
+.cert-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.cert-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.cert-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.cert-row h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+.cert-row img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/*==============================
 Footer
 ================================*/
 
@@ -288,8 +326,6 @@ footer a:visited{
 .address{
     color: var(--id-address-text);
 }
-
-
 
 /*==============================
 Mobile Device Rules
@@ -399,5 +435,12 @@ header {
     #address-label {
         color: var(--footer-text);
         border: 2px solid var(--footer-text);
+    }
+
+    .cert-row,
+    .cert-row:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
     }
 }
