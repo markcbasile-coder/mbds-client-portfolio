@@ -241,19 +241,22 @@ CERT PAGE
 ================================*/
 
 .cert-container {
-    max-width: 800px;
-    margin: 4rem auto;
+    max-width: 90%;
+    margin: 125px auto 15px auto;
     padding: 0 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 3rem;
 }
 
 .cert-row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
+    text-align: center;
     gap: 3rem;
+    border: 2px solid var(--id-logo-border);    
 }
 
 .cert-row:nth-child(even) {
@@ -268,10 +271,10 @@ CERT PAGE
 }
 
 .cert-row img {
-    width: 150px;
-    height: 150px;
+    height: 250px;
     object-fit: contain;
     flex-shrink: 0;
+    align-self: right;
 }
 
 /*==============================
